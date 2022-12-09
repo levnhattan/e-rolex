@@ -79,7 +79,7 @@ const Header = () => {
             <div className="logo">
               <img src={logo} alt="Logo" />
               <div>
-                <h1>Rolex</h1>
+                <h1>ROLEX</h1>
               </div>
             </div>
             <div className="navigation" ref={menuRef} onClick={menuTogge}>
@@ -111,7 +111,7 @@ const Header = () => {
               </span>
               {
                 currentUser ? <span onClick={logout}>Logout</span> :
-                  <div>
+                  <div className='auth'>
                     <Link to='/login' >Login</Link>
                     <Link to='/signup'> Sign Up</Link>
                   </div>

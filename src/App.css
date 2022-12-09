@@ -1,6 +1,5 @@
 /* google fonts */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap');
 /*  css variables */
 :root {
   --card-bg-01: #fdefe6;
@@ -16,6 +15,7 @@
 
 /* reset browser default */
 * {
+  font-family: 'Roboto Slab', serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;

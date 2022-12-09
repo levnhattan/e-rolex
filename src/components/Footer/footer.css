@@ -1,4 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap');
 .footer{
+    font-family: 'Roboto Slab', serif;
     padding-top: 60px;
     padding-bottom: 30px;
     background: var(--primary-color);

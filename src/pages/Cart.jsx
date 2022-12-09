@@ -22,7 +22,7 @@ const Cart = () => {
         <td> <img src={item.imgUrl} alt="" /></td>
         <td>{item.productName}</td>
         <td>{item.price}</td>
-        <td>{item.quantity}</td>
+        <td><i class="ri-add-line"></i>{item.quantity}<i class="ri-subtract-line"></i></td>
         <td><motion.i
           whileTap={{ scale: 1.2 }}
           className="ri-delete-bin-line"
