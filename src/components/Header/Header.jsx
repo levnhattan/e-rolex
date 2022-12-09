@@ -7,9 +7,9 @@ import userIcon from '../../assets/images/user-icon.png'
 import { Container, Row } from 'reactstrap';
 import { useSelector } from 'react-redux';
 import Auth from '../../Auth';
-import {auth} from '../../firebase.confige';
+import { auth } from '../../firebase.confige';
 import { signOut } from 'firebase/auth'
-import {toast} from 'react-toastify';
+import { toast } from 'react-toastify';
 
 
 const nav__links = [
@@ -34,7 +34,6 @@ const nav__links = [
 const Header = () => {
   const headerRef = useRef();
   const menuRef = useRef();
-  const profileRef = useRef();
 
   const totalQuantity = useSelector(state => state.cart.totalQuantity);
   const navigate = useNavigate();
@@ -63,8 +62,7 @@ const Header = () => {
   const navigateToCart = () => {
     navigete('/cart')
   }
-  const toggleProfile = () => profileRef.current.classList.toggle('profile__action')
-  const logout = () =>{
+  const logout = () => {
     signOut(auth)
       .then(() => {
         toast.success('Logout');
@@ -82,7 +80,6 @@ const Header = () => {
               <img src={logo} alt="Logo" />
               <div>
                 <h1>Rolex</h1>
-                {/* <p>Since 2022</p> */}
               </div>
             </div>
             <div className="navigation" ref={menuRef} onClick={menuTogge}>
@@ -104,7 +101,6 @@ const Header = () => {
               </ul>
             </div>
             <div className="nav__icons">
-
               <span className='fav__icon'>
                 <i class="ri-heart-line"></i>
                 <span className='badge'>1</span>
@@ -113,30 +109,18 @@ const Header = () => {
                 <i class="ri-shopping-bag-line"></i>
                 <span className='badge'>{totalQuantity}</span>
               </span>
-              <div className='profile'>
-                <motion.img
-                  whileTap={{ scale: 1.2 }}
-                  src={ userIcon} alt=""
-                  onClick={toggleProfile}
-                />
-                <div className="profile__action" ref ={profileRef} onClick={toggleProfile}>
-                  {
-                    currentUser ? <span onClick={logout}>Logout</span> :
-                      <div className='d-flex align-items-center justify-content-center flex-column bg-dark'>
-                        <Link to='/signup' >Signup</Link>
-                        <Link to='/login' >Login</Link>
-                      </div>
-                  }
-                </div>
-              </div>
-              <div className="mobile__menu" onClick={menuTogge}>
-                <span><i class="ri-menu-line"></i></span>
-              </div>
+              {
+                currentUser ? <span onClick={logout}>Logout</span> :
+                  <div>
+                    <Link to='/login' >Login</Link>
+                    <Link to='/signup'> Sign Up</Link>
+                  </div>
+              }
             </div>
           </div>
         </Row>
       </Container>
-    </header>
+    </header >
   )
 }
 
