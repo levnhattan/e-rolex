@@ -10,6 +10,7 @@ import ProductList from '../components/UI/ProductList'
 import { useDispatch } from 'react-redux';
 import { cartActions } from '../redux/slices/cartSlice';
 import {toast} from 'react-toastify';
+
 const ProductDetails = () => {
 
   const [tab, setTab] = useState('desc');
