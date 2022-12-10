@@ -5,7 +5,7 @@ import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../firebase.confige';
 import { toast } from 'react-toastify'
 import { useNavigate } from 'react-router-dom'
-import '../styles/login.css'
+import '../styles/signup.css'
 
 
 const Signup = () => {
@@ -53,7 +53,7 @@ const Signup = () => {
           {
             loading ?
               <Col lg='12' className='text-center'><h5>Loading...</h5></Col> :
-              <Col lg='6' className='m-auto text-center'>
+              <Col lg='6' className='m-auto text-center signup-form'>
                 <h3 className='fw-bold fs-4 mb-5'>Signup</h3>
                 <Form className='auth__form' onSubmit={signup}>
                   <FormGroup className='form__group'>
@@ -78,7 +78,7 @@ const Signup = () => {
                     ></input>
                   </FormGroup> */}
                   <button type='submit' className="buy__btn auth__btn bg-white  text-dark mb-2  fw-500 text-center">Create account</button>
-                  <p>Already have an account?<Link to='/login' className='text-white fw-500'>Login</Link> </p>
+                  <p>Already have an account?<Link to='/login' className='text-info fw-500'>Login</Link> </p>
                 </Form>
               </Col>
           }

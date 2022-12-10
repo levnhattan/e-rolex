@@ -22,17 +22,12 @@ const Cart = () => {
         <td> <img src={item.imgUrl} alt="" /></td>
         <td>{item.productName}</td>
         <td>{item.price}</td>
-        <td className='d-flex justify-items-center gap-2'>
-          <i className="ri-add-line "></i>
-          {item.quantity}
-          <i className="ri-subtract-line "></i>
-        </td>
-        <td>
-          <motion.i
-            whileTap={{ scale: 1.2 }}
-            className="ri-delete-bin-line"
-            onClick={deleteProduct}
-          ></motion.i> </td>
+        <td><i class="ri-add-line"></i>{item.quantity}<i class="ri-subtract-line"></i></td>
+        <td><motion.i
+          whileTap={{ scale: 1.2 }}
+          className="ri-delete-bin-line"
+          onClick={deleteProduct}
+        ></motion.i> </td>
       </tr>
     )
   }

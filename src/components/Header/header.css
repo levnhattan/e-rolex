@@ -68,7 +68,7 @@
 .auth{
     text-align: center;
     font-size: 15px;
-    text-decoration: underline;
+    text-decoration: none;
     padding: 0px 5px 5px 5px;
 }
 .auth a{
