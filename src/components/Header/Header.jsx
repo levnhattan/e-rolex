@@ -36,7 +36,6 @@ const Header = () => {
   const menuRef = useRef();
 
   const totalQuantity = useSelector(state => state.cart.totalQuantity);
-  const navigate = useNavigate();
   const { currentUser } = Auth();
 
   const sticky = () => {
@@ -114,6 +113,7 @@ const Header = () => {
                   <div className='auth'>
                     <Link to='/login' >Login</Link>
                     <Link to='/signup'> Sign Up</Link>
+                    {/* <Link to='/admin'>Admin</Link> */}
                   </div>
               }
             </div>

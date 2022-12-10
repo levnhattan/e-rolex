@@ -1,0 +1,27 @@
+.admin__header{
+    width: 100%;
+    /* background-color: #777; */
+}
+.admin__nav-top{
+    width: 100%;
+}
+.admin__nav-wrapper-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap:5rem;
+}
+.admin__nav-top-right{
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
+}
+.admin__nav-wrapper-top .search__box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.admin__nav-top-right span i{
+    cursor: pointer;
+    font-size: 1.5rem;
+}

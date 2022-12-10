@@ -2,16 +2,25 @@ import React from 'react'
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 import Routers from '../../routers/Routers'
+import { useLocation } from 'react-router-dom'
+import Admin from '../../admin/Admin'
 
 
 const Layout = () => {
+  const location = useLocation();
+
   return (
     <>
-        <Header/>
-        <div>
-            <Routers />
-        </div>
-        <Footer/>
+      {
+        location.pathname.startsWith('/admin') ? <Admin /> :
+          <>
+            <Header />
+            <div>
+              <Routers />
+            </div>
+            <Footer />
+          </>
+      }
     </>
   )
 }

@@ -1,12 +1,12 @@
 import React from 'react'
 import Auth from '../Auth'
-import {Navigate} from 'react-router-dom'
+import {Navigate, Outlet} from 'react-router-dom'
 
 
-const ProtectedRouter = ({children}) => {
+const ProtectedRouter = () => {
     const { currentUser} = Auth()
 
-  return currentUser ? children : <Navigate to='/login' />;
+  return currentUser ? <Outlet/> : <Navigate to='/login' />;
 }
 
 export default ProtectedRouter

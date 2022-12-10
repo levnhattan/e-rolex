@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
 import { Container, Row, Col, Form, FormGroup } from 'reactstrap';
 import { Link } from 'react-router-dom';
-import { getAuth, createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
-import { auth, storage, db } from '../firebase.confige';
-import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
-import { setDoc, doc } from 'firebase/firestore';
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from '../firebase.confige';
 import { toast } from 'react-toastify'
 import { useNavigate } from 'react-router-dom'
 import '../styles/login.css'
@@ -14,7 +12,6 @@ const Signup = () => {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [file, setFile] = useState(null);
   const [loading, setLoading] = useState(false);
 
   const navigate = useNavigate()
@@ -24,38 +21,17 @@ const Signup = () => {
     setLoading(true)
     try{
       const userCredentail = await createUserWithEmailAndPassword(auth, email, password)
-
-      // const storageRef = ref(storage, `images/${Date.now() + username}`);
-      // const uploadTask = uploadBytesResumable(storageRef,file);
-      // uploadTask.on((error) => {
-      //   toast.error(error.message);
-      // }, () => {
-      //   getDownloadURL(uploadTask.snapshot.ref).then (async (downloadURL) => {
-        //     await updateProfile(user, {
-          //       displayName: username,
-          //       photoURL: downloadURL,
-          //     })
-          
-          //   });
-          // })
       const user = userCredentail.user;
-      await setDoc(doc(db,"users", user.uid), {
-        uid: user.uid,
-        displayName: username,
-        email,
-      });
 
       setLoading(false)
       toast.success("Created account success");
       navigate('/login')
-      console.log(user);
+      // console.log(user);
     }catch(error) {
       toast.error(error.message);
     }
 
   }
-
-  // const signup = createUserWithEmailAndPassword(auth, email, password)
   //   .then((userCredential) => {
   //     // Signed in 
   //     const user = userCredential.user;

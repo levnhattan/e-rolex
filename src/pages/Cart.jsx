@@ -22,12 +22,17 @@ const Cart = () => {
         <td> <img src={item.imgUrl} alt="" /></td>
         <td>{item.productName}</td>
         <td>{item.price}</td>
-        <td><i class="ri-add-line"></i>{item.quantity}<i class="ri-subtract-line"></i></td>
-        <td><motion.i
-          whileTap={{ scale: 1.2 }}
-          className="ri-delete-bin-line"
-          onClick={deleteProduct}
-        ></motion.i> </td>
+        <td className='d-flex justify-items-center gap-2'>
+          <i className="ri-add-line "></i>
+          {item.quantity}
+          <i className="ri-subtract-line "></i>
+        </td>
+        <td>
+          <motion.i
+            whileTap={{ scale: 1.2 }}
+            className="ri-delete-bin-line"
+            onClick={deleteProduct}
+          ></motion.i> </td>
       </tr>
     )
   }
@@ -74,11 +79,11 @@ const Cart = () => {
               </div>
               <p className='fs-4 mt-4'> Free Ship</p>
               <div>
-              <button className="buy__btn w-100">
-                <Link to='/checkout' >Checkout</Link>
-              </button>
-              <button className="buy__btn w-100 mt-3">
-                <Link to='/shop' >Return Shop</Link>
+                <button className="buy__btn w-100">
+                  <Link to='/checkout' >Checkout</Link>
+                </button>
+                <button className="buy__btn w-100 mt-3">
+                  <Link to='/shop' >Return Shop</Link>
                 </button>
               </div>
             </Col>

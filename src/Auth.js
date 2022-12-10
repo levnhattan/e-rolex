@@ -15,7 +15,7 @@ const Auth = () => {
             }
         })
     })
-
+    console.log("currentUser: "+currentUser);
     return  {
         currentUser
     }
