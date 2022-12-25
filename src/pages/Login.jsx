@@ -38,8 +38,8 @@ const Login = () => {
       <Container>
         <Row>
           <Col lg='6'>
-          <h1>Login</h1>
-          <div className="imglogin">
+            <h1>Login</h1>
+            <div className="imglogin">
               <img src={imglogin} alt="imglogin" />
             </div>
           </Col>
@@ -65,21 +65,21 @@ const Login = () => {
                 </Form>
             }
             <div class="block-content">
-                            <div class="actions-toolbar social-btn social-btn-actions-toolbar facebook-login">
-                    <a class="btn btn-block btn-social btn-facebook">
-                        <div class="fa fa-facebook">
-                          <img src={fblogo} alt="Logo" />
-                        </div>
-                    </a>
-                </div>
-                            <div class="actions-toolbar social-btn social-btn-actions-toolbar google-login">
-                    <a class="btn btn-block btn-social btn-google">
-                        <div class="fa fa-google">
-                          <img src={gmlogo} alt="Logo" />
-                        </div>
-                    </a>
-                </div>
-                    </div>
+              <div class="actions-toolbar social-btn social-btn-actions-toolbar facebook-login">
+                <a class="btn btn-block btn-social btn-facebook">
+                  <div class="fa fa-facebook">
+                    <img src={fblogo} alt="Logo" />
+                  </div>
+                </a>
+              </div>
+              <div class="actions-toolbar social-btn social-btn-actions-toolbar google-login">
+                <a class="btn btn-block btn-social btn-google">
+                  <div class="fa fa-google">
+                    <img src={gmlogo} alt="Logo" />
+                  </div>
+                </a>
+              </div>
+            </div>
           </Col>
         </Row>
       </Container>

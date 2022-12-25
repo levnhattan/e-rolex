@@ -2,7 +2,10 @@ import React from 'react'
 
 const ManageOrder = () => {
   return (
-    <div>ManageOrder</div>
+    <div>
+        ádasadsas
+
+    </div>
   )
 }
 

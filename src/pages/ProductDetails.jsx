@@ -9,7 +9,7 @@ import { motion } from 'framer-motion'
 import ProductList from '../components/UI/ProductList'
 import { useDispatch } from 'react-redux';
 import { cartActions } from '../redux/slices/cartSlice';
-import {toast} from 'react-toastify';
+import { toast } from 'react-toastify';
 
 const ProductDetails = () => {
 
@@ -37,13 +37,13 @@ const ProductDetails = () => {
     const reviewUserMess = reviewMess.current.value;
 
     // console.log(reviewUserName, reviewUserMess, rating);
-    const receiveReview ={
-      userName : reviewUserName,
-      mess : reviewUserMess,
+    const receiveReview = {
+      userName: reviewUserName,
+      mess: reviewUserMess,
       rating,
     }
     // console.log(receiveReview);
-    toast.success('Successfully review');  
+    toast.success('Successfully review');
 
   }
   const addCart = () => {
@@ -53,7 +53,7 @@ const ProductDetails = () => {
       productName,
       price,
     }))
-    toast.success('Successfully added product');  
+    toast.success('Successfully added product');
 
   }
   return (
@@ -138,31 +138,32 @@ const ProductDetails = () => {
                             <input type="text" placeholder='enter name' ref={reviewUser} />
                           </div>
                           <div className="form__group d-flex align-items-center gap-5" >
-                            <motion.span whileTap={{scale: 1.2}} onClick={() => setRating(1)}>1
+                            <motion.span whileTap={{ scale: 1.2 }} onClick={() => setRating(1)}>1
                               <i className="ri-star-s-fill"></i>
                             </motion.span>
-                            <motion.span whileTap={{scale: 1.2}} onClick={() => setRating(2)}>2
+                            <motion.span whileTap={{ scale: 1.2 }} onClick={() => setRating(2)}>2
                               <i className="ri-star-s-fill"></i>
                             </motion.span>
-                            <motion.span whileTap={{scale: 1.2}} onClick={() => setRating(3)}>3
+                            <motion.span whileTap={{ scale: 1.2 }} onClick={() => setRating(3)}>3
                               <i className="ri-star-s-fill"></i>
                             </motion.span>
-                            <motion.span whileTap={{scale: 1.2}} onClick={() => setRating(4)}>4
+                            <motion.span whileTap={{ scale: 1.2 }} onClick={() => setRating(4)}>4
                               <i className="ri-star-s-fill"></i>
                             </motion.span>
-                            <motion.span whileTap={{scale: 1.2}} onClick={() => setRating(5)}>5
+                            <motion.span whileTap={{ scale: 1.2 }} onClick={() => setRating(5)}>5
                               <i className="ri-star-s-fill"></i>
                             </motion.span>
                           </div>
                           <div className="form__group">
                             <textarea row={4} type="text" placeholder='Review' ref={reviewMess} />
                           </div>
-                          <motion.button whileTap={{scale:1.2}} className="buy__btn" type='submit'>Submit</motion.button>
+                          <motion.button whileTap={{ scale: 1.2 }} className="buy__btn" type='submit'>Submit</motion.button>
                         </form>
                       </div>
                     </div>
                   </div>
-                )
+                ) 
+                
               }
             </Col>
             <Col lg='12'>
