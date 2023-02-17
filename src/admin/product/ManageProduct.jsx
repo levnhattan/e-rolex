@@ -4,7 +4,7 @@ import { db } from '../../firebase.confige'
 import { set, get, ref, child, push, update, onValue, remove } from "firebase/database";
 import EditProduct from './EditProduct';
 import AddProduct from './AddProduct';
-
+import './style.css';
 
 const ManageProduct = () => {
 
@@ -75,11 +75,11 @@ const ManageProduct = () => {
   }
 
   return (
-    <div className="container-fluid px-4">
-      <h1 className="mt-4">Tables</h1>
+    <div className="container-fluid px-4 ">
+      <h1 className="mt-4">Product Management</h1>
       <ol className="breadcrumb mb-4">
         <li className="breadcrumb-item"><a href="#">Dashboard</a></li>
-        <li className="breadcrumb-item active">Tables</li>
+        <li className="breadcrumb-item active">Product</li>
       </ol>
       <div className=" row">
         <div className="col-10">
@@ -96,7 +96,7 @@ const ManageProduct = () => {
         </div>
       </div>
 
-      <div className="row lh-auto ">
+      <div className="row lh-auto main__product ">
         <div className="col-md-12">
           <div className="card mb-4">
             <div className="card-header ">
@@ -124,9 +124,7 @@ const ManageProduct = () => {
                       return (
                         <tr key={key}>
                           <td>{value.productName}</td>
-                          <td>{}</td>
-                          {/* <td>{value.imgUrl}</td> */}
-                          {/* <td>{URL.revokeObjectURL(`${value.imgUrl}`)}</td> */}
+                          <td><img src={`${value.imgUrl}`}/></td>
                           <td>{value.category}</td>
                           <td>{value.date}</td>
                           <td>{value.description}</td>

@@ -8,7 +8,7 @@ const Clock = () => {
 
     let interval;
     const countDown = () => {
-        const des = new Date('Nov 24, 2022').getTime();
+        const des = new Date('Dec 28, 2022').getTime();
         // console.log(des);
         interval = setInterval(() => {
 

@@ -1,0 +1,261 @@
+{
+  "Brand": {
+    "B01": {
+      "addressBrand": "Hà Nội",
+      "nameBrand": "Omega",
+      "phoneNumber": "0278 991 123"
+    },
+    "B02": {
+      "addressBrand": "HCM",
+      "nameBrand": "Rolex",
+      "phoneNumber": "092 123 121"
+    }
+  },
+  "Cart": {
+    "C01": {
+      "imgUrl": "https://firebasestorage.googleapis.com/v0/b/commerce-rolex.appspot.com/o/images%2Fcasio1.jpg?alt=media&token=b5ae9449-c7dc-4b7e-a8f2-d7916e466af2",
+      "nameProduct": "MXM12",
+      "price": "1 200 000",
+      "quantity": 3,
+      "total": "3 600 000 "
+    }
+  },
+  "Category": {
+    "C01": {
+      "nameBrand": "Rolex",
+      "nameCategory": "Chronograph",
+      "quantity": 32
+    },
+    "C02": {
+      "nameBrand": "Samsung",
+      "nameCategory": "Rolex",
+      "quantity": 12
+    }
+  },
+  "Order": {
+    "01": {
+      "dateCreate": "01/12/2022",
+      "nameCustomer": "Tân",
+      "price": "3 500 000",
+      "productName": "OMEGA DE VILLE PRESTIGE",
+      "quantity": 3,
+      "status": true,
+      "total": "10 500 000"
+    },
+    "02": {
+      "dateCreate": "02/12/2022",
+      "nameCustomer": "Thắng",
+      "price": "200 000",
+      "productName": "FREDERIQUE ",
+      "quantity": 1,
+      "status": true,
+      "total": "200 000"
+    }
+  },
+  "Product": {
+    "-NK74uu9_sM0roUwa1oV": {
+      "category": "watch",
+      "date": "12/01/2026",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit",
+      "imgUrl": "https://firebasestorage.googleapis.com/v0/b/commerce-rolex.appspot.com/o/images%2Fwatch-02.jpg?alt=media&token=4c155326-54a0-48c6-b4e4-d320c8acd3aa",
+      "price": "120 000 000 VNĐ",
+      "productName": "MICHAEL KORS",
+      "quantity": "12",
+      "sale": "false"
+    },
+    "-NK75CMxTWTOBdfJXHDn": {
+      "category": "watch",
+      "date": "21/12/2040",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit",
+      "imgUrl": "https://firebasestorage.googleapis.com/v0/b/commerce-rolex.appspot.com/o/images%2Frolex3.jpg?alt=media&token=e520aaef-fd12-4235-b8ef-f5c25a1f7c3f",
+      "price": "123 000 000 VNĐ",
+      "productName": "LONGINES MASTER",
+      "quantity": "12",
+      "sale": "true"
+    },
+    "-NK75O0swPZJQgyzLskw": {
+      "category": "watch",
+      "date": "21/12/2040",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit",
+      "imgUrl": "https://firebasestorage.googleapis.com/v0/b/commerce-rolex.appspot.com/o/images%2Frolex2.jpg?alt=media&token=84d74844-5ccd-4aed-99c8-682d090a9f3e",
+      "price": "123 000 000 VNĐ",
+      "productName": "OMEGA DE VILLE",
+      "quantity": "20",
+      "sale": "false"
+    },
+    "-NK75Zz010Lgkew-5BAZ": {
+      "category": "watch",
+      "date": "21/12/2040",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit",
+      "imgUrl": "https://firebasestorage.googleapis.com/v0/b/commerce-rolex.appspot.com/o/images%2Fwatch-03.jpg?alt=media&token=13c0d58d-ab2b-4556-a9d7-1bdb291102f5",
+      "price": "123 000 000 VNĐ",
+      "productName": "Timex Easy",
+      "quantity": "23",
+      "sale": "false"
+    },
+    "-NOPMR40T7w73BYHVXNI": {
+      "category": "watch",
+      "date": "2023-01-31",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit",
+      "imgUrl": "https://firebasestorage.googleapis.com/v0/b/commerce-rolex.appspot.com/o/images%2Fcasio2.jpg?alt=media&token=60dc30da-5de8-4239-b31a-f443425f5092",
+      "price": "90",
+      "productName": "Nguyễn Văn A",
+      "quantity": "5",
+      "sale": "1"
+    },
+    "-NOPMqGrp7_2tADQ-7Ep": {
+      "category": "watch",
+      "date": "2023-01-29",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit",
+      "imgUrl": "https://firebasestorage.googleapis.com/v0/b/commerce-rolex.appspot.com/o/images%2Ffb_logo.png?alt=media&token=43d45aa1-492c-4e9a-87bc-6994a95049df",
+      "price": "90",
+      "productName": "Thắng ngu",
+      "quantity": "5",
+      "sale": "1"
+    },
+    "-NOPSn28g-iL92OIKoDj": {
+      "category": "watch",
+      "date": "2023-02-12",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit",
+      "imgUrl": "https://firebasestorage.googleapis.com/v0/b/commerce-rolex.appspot.com/o/images%2Fcasio2.jpg?alt=media&token=62813705-ba44-40ec-838a-eefc91483a93",
+      "price": "90",
+      "productName": "FOSSIL ME3104",
+      "quantity": "5",
+      "sale": "1"
+    },
+    "-NOPT5DcU97lKFPCvHsy": {
+      "category": "watch",
+      "date": "2023-03-01",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit",
+      "imgUrl": "https://firebasestorage.googleapis.com/v0/b/commerce-rolex.appspot.com/o/images%2Frolex2.jpg?alt=media&token=84d74844-5ccd-4aed-99c8-682d090a9f3e",
+      "price": "123",
+      "productName": "tân đẹp trai",
+      "quantity": "123",
+      "sale": "132"
+    },
+    "-NOQ7MsUiStpLS4kOEI5": {
+      "category": "watch",
+      "date": "2023-01-30",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit",
+      "imgUrl": "https://firebasestorage.googleapis.com/v0/b/commerce-rolex.appspot.com/o/images%2Fgmail_logo.png?alt=media&token=488a5c68-d7c1-4940-acf8-9a1bd450c600",
+      "price": "90",
+      "productName": "Thắng ngu",
+      "quantity": "5",
+      "sale": "Sale 50%"
+    },
+    "P02": {
+      "category": "rolex",
+      "date": "10/10/2030",
+      "description": "Consequuntur iure quas illo voluptates labore tempore",
+      "imgUrl": "https://firebasestorage.googleapis.com/v0/b/commerce-rolex.appspot.com/o/images%2Fcasio2.jpg?alt=media&token=0cbc65dd-4084-478d-a4d2-4b55c2988112",
+      "price": "450 000 ",
+      "productName": "FREDERIQUE",
+      "quantity": 12,
+      "sale": false
+    },
+    "P03": {
+      "category": "watch",
+      "date": "01/01/2035",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit",
+      "imgUrl": "https://firebasestorage.googleapis.com/v0/b/commerce-rolex.appspot.com/o/images%2Fcasio3.jpg?alt=media&token=fdb72005-c474-4f10-b9a8-65c1484e20b4",
+      "price": "210 000 ",
+      "productName": "MICHAEL",
+      "quantity": 2,
+      "sale": true
+    },
+    "P04": {
+      "category": "watch",
+      "date": "20/03/2050",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit",
+      "imgUrl": "https://firebasestorage.googleapis.com/v0/b/commerce-rolex.appspot.com/o/images%2Frolex.jpg?alt=media&token=53e971bd-a203-4c03-9415-bd6f1553b9b0",
+      "price": "163 000 ",
+      "productName": "BIG BANG MXM18",
+      "quantity": 12,
+      "sale": false
+    }
+  },
+  "ProductBill": {
+    "HD01": {
+      "addressShip": "123 Quang Trung",
+      "dateCreateBill": "02/12/2022",
+      "nameCustomer": "Tân",
+      "phoneNumber": "0909 898 787",
+      "product": {
+        "name": "FOSSIL ME3104",
+        "price": "120 000",
+        "quantity": 2
+      },
+      "totalBill": "240 000"
+    },
+    "HD02": {
+      "addressShip": "732 ĐBP",
+      "dateCreateBill": "01/12/2022",
+      "nameCustomer": "Thắng",
+      "phoneNumber": "0989 898 787",
+      "product": {
+        "name": "FREDERIQUE ",
+        "price": "100 000",
+        "quantity": 1
+      },
+      "totalBill": "100 000"
+    }
+  },
+  "User": {
+    "-NKIIa6SzXcqoNIa6lLF": {
+      "address": "Quảng Nam",
+      "email": "tan@gmail.com",
+      "name": "Tân",
+      "password": "12345678",
+      "phone": "0989 987 789",
+      "role": "Admin"
+    },
+    "-NKIIuEUGeKSJmKsG6fo": {
+      "address": "Hà Nội",
+      "email": "a@gmail.com",
+      "name": "Nguyễn Văn A",
+      "password": "1234567",
+      "phone": "090 909 8998",
+      "role": "User"
+    },
+    "-NKIS1bE-LJa3_3IIBAI": {
+      "address": "Quảng Ngãi",
+      "email": "cuong@gmail.com",
+      "name": "Cường",
+      "password": "123456",
+      "phone": "0989 779 889",
+      "role": "Staff"
+    },
+    "-NKJLmeKC6vbDqkopqwc": {
+      "address": "Huế",
+      "email": "nguyenvana@gmail.com",
+      "name": "Nguyễn Văn A",
+      "password": "nguyenvana",
+      "phone": "0989 666 777",
+      "role": "User"
+    },
+    "-NKJLwm-NhfEiGwJcb31": {
+      "address": "",
+      "email": "a@gmail.com",
+      "name": "a",
+      "password": "123456",
+      "phone": "",
+      "role": "Admin"
+    },
+    "-NKJM5g-XuNmn1u81xtp": {
+      "address": "",
+      "email": "b@gmail.com",
+      "name": "b",
+      "password": "123456",
+      "phone": "",
+      "role": ""
+    },
+    "-NKJRSOrpbS2V7D0i3TW": {
+      "address": "",
+      "email": "lvnt@gmail.com",
+      "name": "LVNT",
+      "password": "123456",
+      "phone": "",
+      "role": ""
+    }
+  }
+}

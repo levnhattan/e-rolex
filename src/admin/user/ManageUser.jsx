@@ -2,9 +2,11 @@ import React, { useState, useEffect } from 'react'
 import { toast } from 'react-toastify'
 import { db } from '../../firebase.confige'
 import { set, get, ref, child, push, update, onValue, remove } from "firebase/database";
+import { getAuth, deleteUser } from "firebase/auth";
 import AddUser from './AddUser';
 import EditUser from './EditUser';
-// thêm collection brand, category chỉnh lại price: VNĐ, thêm date của sản phẩm, chia roles cho user
+import './style.css';
+
 
 const ManageUser = () => {
 
@@ -29,7 +31,7 @@ const ManageUser = () => {
       }
     }
   }
-  const handleEdit = (value) =>{
+  const handleEdit = (value) => {
     setEditUser(value)
     setActiveFormEdit(true)
   }
@@ -62,8 +64,11 @@ const ManageUser = () => {
 
 
   // delete user
-  const deleteUser = (id) => {
+  const handleDeleteUser = (id) => {
     if (window.confirm("Are you sure delete this user???")) {
+      const auth = getAuth();
+      const user = auth.currentUser;
+      deleteUser(user)
       const userRef = ref(db, 'User');
       remove(child(userRef, id))
         .then(() => { toast.success("User deleted successfully!") })
@@ -73,10 +78,10 @@ const ManageUser = () => {
 
   return (
     <div className="container-fluid px-4">
-      <h1 className="mt-4">Tables</h1>
+      <h1 className="mt-4">User Management</h1>
       <ol className="breadcrumb mb-4">
         <li className="breadcrumb-item"><a href="#">Dashboard</a></li>
-        <li className="breadcrumb-item active">Tables</li>
+        <li className="breadcrumb-item active">User</li>
       </ol>
       <div className=" row">
         <div className="col-10">
@@ -93,8 +98,8 @@ const ManageUser = () => {
         </div>
       </div>
 
-      <div className="row lh-auto">
-        <div className="col-md-8">
+      <div className="row lh-auto main__user">
+        <div className="col-md-12">
           <div className="card mb-4">
           </div>
           <div className="card mb-4">
@@ -130,7 +135,7 @@ const ManageUser = () => {
 
                           <td className="d-flex text-items-center gap-4" >
                             <button type="button" className='p-1 mb-2 btn btn-danger text-white rounded'
-                              onClick={() => deleteUser(value.id)}
+                              onClick={() => handleDeleteUser(value.id)}
                             > Delete
                             </button>
                             <button type="button"

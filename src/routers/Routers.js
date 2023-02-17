@@ -10,7 +10,6 @@ import Login from '../pages/Login'
 import Signup from '../pages/Signup'
 import ProtectedRouter from './ProtectedRouter'
 import Admin from '../admin/Admin'
-import ManageUser from '../admin/user/ManageUser'
 
 const Routers = () => {
   return (
@@ -22,7 +21,9 @@ const Routers = () => {
       <Route path='cart' element={<Cart />}></Route>
       <Route path='/*' element={<ProtectedRouter />}>
         <Route path='checkout' element={<Checkout />}></Route>
-        <Route path='user' element={<ManageUser />}></Route>
+      </Route>
+      <Route path='/*' element={<ProtectedRouter />}>
+        <Route path='admin' element={<Admin />}></Route>
       </Route>
       <Route path='login' element={<Login />}></Route>
       <Route path='signup' element={<Signup />}></Route>

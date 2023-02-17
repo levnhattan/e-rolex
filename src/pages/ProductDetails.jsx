@@ -62,7 +62,7 @@ const ProductDetails = () => {
         <Container>
           <Row>
             <Col lg='6'>
-              <img src={imgUrl} alt="" />
+              <img src={imgUrl} alt=""  />
             </Col>
             <Col lg='6'>
               <div className="product__details">
@@ -78,7 +78,7 @@ const ProductDetails = () => {
                   <p>(<span>{avgRating} </span>ratings)</p>
                 </div>
                 <div className='d-flex align-items-center gap-5'>
-                  <span className='product__price'>${price}</span>
+                  <span className='product__price'>{price} 000 VNĐ</span>
                   <span>Category: {category}</span>
                 </div>
 
@@ -163,7 +163,7 @@ const ProductDetails = () => {
                     </div>
                   </div>
                 ) 
-                
+              
               }
             </Col>
             <Col lg='12'>

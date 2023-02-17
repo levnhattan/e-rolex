@@ -10,23 +10,34 @@ import { Link } from 'react-router-dom';
 const Cart = () => {
   const cartItem = useSelector(state => state.cart.cartItem);
   const totalAmount = useSelector(state => state.cart.totalAmount);
-
-  const Tr = ({ item }) => {
+  
+  const List = ({ item }) => {
     const dispatch = useDispatch();
-
+    const addCart = () => {
+      dispatch(cartActions.addItem({
+          id: item.id,
+          productName: item.productName,
+          price: item.price,
+          imgUrl: item.imgUrl
+        })
+      )
+    };
     const deleteProduct = () => {
       dispatch(cartActions.deleteItem(item.id))
+    }
+    const removeProduct = () => {
+      dispatch(cartActions.removeItem(item.id))
     }
     return (
       <tr >
         <td> <img src={item.imgUrl} alt="" /></td>
         <td>{item.productName}</td>
-        <td>{item.price}</td>
-        <td><i class="ri-add-line"></i>{item.quantity}<i class="ri-subtract-line"></i></td>
+        <td>{item.price} 000 VNĐ</td>
+        <td><i class="ri-add-line" onClick={addCart}></i>{item.quantity}<i class="ri-subtract-line" onClick={deleteProduct}></i></td>
         <td><motion.i
           whileTap={{ scale: 1.2 }}
           className="ri-delete-bin-line"
-          onClick={deleteProduct}
+          onClick={removeProduct}
         ></motion.i> </td>
       </tr>
     )
@@ -47,7 +58,7 @@ const Cart = () => {
                       <thead>
                         <tr>
                           <th>Image</th>
-                          <th>Title</th>
+                          <th>Name Product</th>
                           <th>Price</th>
                           <th>Quantity</th>
                           <th>Delete</th>
@@ -56,7 +67,7 @@ const Cart = () => {
                       <tbody>
                         {
                           cartItem.map((item, index) => (
-                            <Tr item={item} key={index}></Tr>
+                            <List item={item} key={index}></List>
                           ))
                         }
                       </tbody>
@@ -67,10 +78,10 @@ const Cart = () => {
             </Col>
             <Col lg='3'>
               <div>
-                <h6 className='d-flex align-items-center justity-content-between '>
+                <h4 className='d-flex align-items-center justity-content-between '>
                   Total
-                  <span className='fs-4 fw-bold'>${totalAmount}</span>
-                </h6>
+                  <span className='fs-4 fw-bold'> {totalAmount} 000  VNĐ</span>
+                </h4>
               </div>
               <p className='fs-4 mt-4'> Free Ship</p>
               <div>

@@ -8,8 +8,10 @@ import { Container, Row } from 'reactstrap';
 import { useSelector } from 'react-redux';
 import Auth from '../../Auth';
 import { auth } from '../../firebase.confige';
-import { signOut } from 'firebase/auth'
+import { signOut, getAuth } from 'firebase/auth'
 import { toast } from 'react-toastify';
+import { set, get, ref, child, push, update, onValue, remove } from "firebase/database";
+import { db } from '../../firebase.confige'
 
 
 const nav__links = [
@@ -52,7 +54,6 @@ const Header = () => {
 
   useEffect(() => {
     sticky();
-
     return () =>
       window.removeEventListener('scroll', sticky);
   });
@@ -70,6 +71,18 @@ const Header = () => {
         toast.error(err.message);
       })
   }
+
+  // Read data 
+  var name;
+  useEffect(() => {
+    const userRef = ref(db, 'User/');
+    onValue(userRef, (snapshot) => {
+      snapshot.forEach((childSnapshot) => {
+         name = childSnapshot.val().name;
+      })
+    })
+    console.log("name " + name);
+  }, [])
   return (
     <header className="header" ref={headerRef}>
       <Container>
@@ -105,8 +118,10 @@ const Header = () => {
                 <i class="ri-shopping-bag-line"></i>
                 <span className='badge'>{totalQuantity}</span>
               </span>
+              {/* <h3>Welcom, {}</h3> */}
+
               {
-                currentUser ? <span onClick={logout}>Logout</span> :
+                currentUser ? <span onClick={logout}>  Logout</span> :
                   <div className='auth'>
                     <Link to='/login' >Login</Link>
                     <Link to='/signup'> Sign Up</Link>

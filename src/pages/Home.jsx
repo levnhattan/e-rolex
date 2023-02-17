@@ -10,6 +10,8 @@ import ProductList from '../components/UI/ProductList'
 import products from '../assets/data/products'
 import counterImg from '../assets/images/watch-03.jpg'
 import Clock from '../components/UI/Clock'
+import db from '../firebase.confige';
+import { set, get, ref, child, push, update, onValue, remove } from "firebase/database";
 
 
 
@@ -19,7 +21,37 @@ const Home = () => {
   const [mobile, setMoblie] = useState([]);
   const [wireles, setWireles] = useState([]);
   const [popular, setPopular] = useState([]);
+  // const [products, setProduct] = useState([]);
 
+  // useEffect(() => {
+  //   const productRef = ref(db, 'Product/');
+  //   onValue(productRef, (snapshot) => {
+  //     var tempData = [];
+  //     snapshot.forEach((childSnapshot) => {
+  //       var key = childSnapshot.key;
+  //       var category = childSnapshot.val().category;
+  //       var productName = childSnapshot.val().productName;
+  //       var quantity = childSnapshot.val().quantity;
+  //       var date = childSnapshot.val().date;
+  //       var description = childSnapshot.val().description;
+  //       var imgUrl = childSnapshot.val().imgUrl;
+  //       var price = childSnapshot.val().price;
+  //       var sale = childSnapshot.val().sale;
+  //       tempData.push({
+  //         id: key,
+  //         productName: productName,
+  //         category: category,
+  //         quantity: quantity,
+  //         date: date,
+  //         imgUrl: imgUrl,
+  //         description: description,
+  //         price: price,
+  //         sale: sale,
+  //       })
+  //       setProduct([...tempData])
+  //     })
+  //   })
+  // }, [])
   const year = new Date().getFullYear();
   useEffect(() => {
     const filterTrending = products.filter(product => product.category === 'rolex');

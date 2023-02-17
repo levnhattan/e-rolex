@@ -23,7 +23,7 @@ const Login = () => {
     try {
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
-
+      // console.log(user);
       setLoading(false)
       toast.success("Login success");
       navigate('/home')

@@ -4,20 +4,17 @@ import { Link } from 'react-router-dom'
 import '../styles/admin.css'
 import { db } from '../firebase.confige'
 import { set, ref, child, push, update } from "firebase/database";
-import AdminNav from './AdminNav';
-import Statistical from './Statistical';
-import Chart from './Chart';
+import AdminNav from '../admin/component/AdminNav';
+import Statistical from '../admin/component/Statistical'
+import Chart from '../admin/component/Chart';
 import ManageUser from './user/ManageUser'
 import ManageProduct from './product/ManageProduct'
 import ManageBill from './bill/ManageBill'
-import ManageSale from './sale/ManageSale'
 import ManageOrder from './order/ManageOrder'
 
 
 const Admin = () => {
   const [tab, setTab] = useState("0");
-
-
 
   const renderUi = () => {
     switch (tab) {
@@ -33,10 +30,7 @@ const Admin = () => {
         return (
           <ManageBill />
         )
-      case "4":
-        return (
-          <ManageSale />
-        )
+      
       case "5":
         return (
           <ManageOrder />
@@ -77,7 +71,6 @@ const changeAdmin = () =>{
                     <nav className="sb-sidenav-menu-nested nav">
                       <a className="nav-link" onClick={() => setTab("2")}>Product</a>
                       <a className="nav-link" onClick={() => setTab("3")} >Product Bill</a>
-                      <a className="nav-link" onClick={() => setTab("4")} >Product Sale</a>
                     </nav>
                   </div>
 
@@ -98,17 +91,6 @@ const changeAdmin = () =>{
               {
                 renderUi()
               }
-              {/* {
-                stateUser ? <ManageUser /> :
-                  <div className="container-fluid px-4">
-                    <h1 className="mt-4">Dashboard</h1>
-                    <ol className="breadcrumb mb-4">
-                      <li className="breadcrumb-item active">Dashboard</li>
-                    </ol>
-                    <Statistical />
-                    <Chart />
-                  </div>
-              } */}
             </main>
           </div>
         </div>
