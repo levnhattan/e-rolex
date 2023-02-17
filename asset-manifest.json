@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/e-rolex/static/css/main.06eecc6f.css",
+    "main.js": "/e-rolex/static/js/main.886b2b54.js",
+    "static/media/remixicon.svg?t=1590207869815": "/e-rolex/static/media/remixicon.9cedd2150922ead84869.svg",
+    "static/media/rolex5.png": "/e-rolex/static/media/rolex5.4d8c4b4c492f636d1c24.png",
+    "static/media/watch-04.jpg": "/e-rolex/static/media/watch-04.1fa3af75c78f4e1fe5ac.jpg",
+    "static/media/watch-03.jpg": "/e-rolex/static/media/watch-03.6a5a8f094142a79806e3.jpg",
+    "static/media/imglogin.png": "/e-rolex/static/media/imglogin.f889a0570250afc04492.png",
+    "static/media/remixicon.eot?t=1590207869815": "/e-rolex/static/media/remixicon.5cb99e6cba5a4619063f.eot",
+    "static/media/remixicon.ttf?t=1590207869815": "/e-rolex/static/media/remixicon.f2616f597cf98f38d234.ttf",
+    "static/media/watch-01.jpg": "/e-rolex/static/media/watch-01.edc39b7f8f5435c24e41.jpg",
+    "static/media/remixicon.woff?t=1590207869815": "/e-rolex/static/media/remixicon.8d09fa11700ed63cf96e.woff",
+    "static/media/watch-02.jpg": "/e-rolex/static/media/watch-02.c68df91cf57fa2c349e6.jpg",
+    "static/media/casio2.jpg": "/e-rolex/static/media/casio2.32862ecf3df8d9f44294.jpg",
+    "static/media/remixicon.woff2?t=1590207869815": "/e-rolex/static/media/remixicon.90668f6f9b3c2c18a090.woff2",
+    "static/media/casio3.jpg": "/e-rolex/static/media/casio3.2a37758018c313141312.jpg",
+    "static/media/rolex2.jpg": "/e-rolex/static/media/rolex2.2a37758018c313141312.jpg",
+    "static/media/rolex.jpg": "/e-rolex/static/media/rolex.b55b9e7d208544ea5cd1.jpg",
+    "static/media/rolex3.jpg": "/e-rolex/static/media/rolex3.435429fd95c8d741c66d.jpg",
+    "static/media/casio1.jpg": "/e-rolex/static/media/casio1.001e8210d93d6a2d00b5.jpg",
+    "static/media/eco-logo.png": "/e-rolex/static/media/eco-logo.5cf2bfac8b18d8ff1fc6.png",
+    "static/media/fb_logo.png": "/e-rolex/static/media/fb_logo.fe3edacd7d640cb4879b.png",
+    "static/media/rolex1.jpg": "/e-rolex/static/media/rolex1.8b34b6f77b0ff3618ea6.jpg",
+    "index.html": "/e-rolex/index.html",
+    "main.06eecc6f.css.map": "/e-rolex/static/css/main.06eecc6f.css.map",
+    "main.886b2b54.js.map": "/e-rolex/static/js/main.886b2b54.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.06eecc6f.css",
+    "static/js/main.886b2b54.js"
+  ]
+}
